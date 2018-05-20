@@ -100,7 +100,7 @@ public class Home extends AppCompatActivity
             Intent cinemaIntent = new Intent(this, YourState.class);
             startActivity(cinemaIntent);
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
