@@ -1,5 +1,6 @@
 package com.sssb.orchard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -80,20 +81,25 @@ public class Home extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if(id == R.id.nav_home)
+        {
+            Intent cinemaIntent = new Intent(this, Home.class);
+            startActivity(cinemaIntent);
         }
-
+        else if (id == R.id.nav_search_legislators) {
+            Intent cinemaIntent = new Intent(this, SearchLegislators.class);
+            startActivity(cinemaIntent);
+        }
+        else if (id == R.id.nav_search_bills)
+        {
+            Intent cinemaIntent = new Intent(this, SearchBills.class);
+            startActivity(cinemaIntent);
+        }
+        else if (id == R.id.nav_your_state)
+        {
+            Intent cinemaIntent = new Intent(this, YourState.class);
+            startActivity(cinemaIntent);
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
